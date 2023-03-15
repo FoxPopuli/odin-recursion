@@ -10,6 +10,7 @@ const mergeSort = (arr) => {
     const leftS = mergeSort(left)
     const rightS = mergeSort(right)
 
+    // Merge step
     const sorted = [];
     while (leftS.length && rightS.length) {
 
@@ -20,8 +21,6 @@ const mergeSort = (arr) => {
         }
     }
 
-    console.log(sorted, leftS, rightS)
-    // return sorted
     return [...sorted, ...leftS, ...rightS]
 
 }
